@@ -10,6 +10,25 @@
 </head>
 
 <body>
+    <main>
+        <h1 class="text-center">Film</h1>
+        <ul>
+            @foreach ($movies as $movie)
+            <li>
+                <h2>
+                    {{$movie['title']}}
+                </h2>
+                <ul>
+                    <li><strong>Titolo Originale:</strong> {{$movie['original_title']}}</li>
+                    <li><strong>Nazionalità:</strong> {{$movie['nationality']}}</li>
+                    <li><strong>Voto:</strong> {{$movie['vote']}}</li>
+                    <li><strong>Data di uscita:</strong> {{$movie['date']}}</li>
+                </ul>
+            </li>
+
+            @endforeach
+        </ul>
+    </main>
 </body>
 
 </html>
